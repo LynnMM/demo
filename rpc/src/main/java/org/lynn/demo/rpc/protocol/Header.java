@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class Header {
 
   /**
@@ -27,12 +28,5 @@ public class Header {
    */
   private Integer size;
 
-  public Header(short magic, byte version, byte extraInfo, long messageId, int size) {
-    this.magic = magic;
-    this.version = version;
-    this.extraInfo = extraInfo;
-    this.messageId = messageId;
-    this.size = size;
-  }
 }
 
